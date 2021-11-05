@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(){
     int fst, lst;
-    scanf("%d,%d",&fst,&lst);
+    scanf("%d %d",&fst,&lst);
     printf("The Armstrong numbers are:");
     for (int i = fst; i < lst; i++)
     {
@@ -11,7 +11,7 @@ int main(){
             printf(" %d",i);
         }
     }
-    printf("/nThe Palindromes are:");
+    printf("\nThe Palindromes are:");
     for (int i = fst; i < lst; i++)
     {
         if (isPalindrome(i))
@@ -19,7 +19,7 @@ int main(){
             printf(" %d",i);
         }
     }
-    printf("/nThe Prime numbers are:");
+    printf("\nThe Prime numbers are:");
     for (int i = fst; i < lst; i++)
     {
         if (isPrime(i))
@@ -27,7 +27,7 @@ int main(){
             printf(" %d",i);
         }
     }
-    printf("/nThe Strong numbers are:");
+    printf("\nThe Strong numbers are:");
     for (int i = fst; i < lst; i++)
     {
         if (isStrong(i))
@@ -35,4 +35,5 @@ int main(){
             printf(" %d",i);
         }
     }
+    return 0;
 }
