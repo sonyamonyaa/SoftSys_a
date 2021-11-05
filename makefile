@@ -5,7 +5,7 @@ OBJ_LOOP=advancedClassificationLoop.o
 OBJ_REC=advancedClassificationRecursion.o
 OBJ_BASIC=basicClassification.o
 FLAGS= -Wall -g
-all: loops recursives loopd recursived mains maindrec maindloop
+all: mains maindrec maindloop
 mains: $(OBJECTS_MAIN) recursives 
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
 maindloop: $(OBJECTS_MAIN) loopd
