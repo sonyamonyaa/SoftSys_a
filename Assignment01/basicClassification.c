@@ -1,4 +1,4 @@
-#include <NumClass.h>
+#include "NumClass.h"
 int isPrime(int num){
     //if divisible by 2, only 2 is prime:
     if (num % 2 == 0)

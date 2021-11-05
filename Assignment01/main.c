@@ -1,4 +1,4 @@
-#include <NumClass.h>
+#include "NumClass.h"
 #include <stdio.h>
 int main(){
     int fst, lst;

@@ -1,4 +1,4 @@
-#include <NumClass.h>
+#include "NumClass.h"
 #include <math.h>
 //self note: recursion implementation
 
@@ -7,7 +7,7 @@ using recursion.
 */
 int recPowSum(int num, int n)
 {
-    int sum;
+    int sum =0;
     if (num == 0)
         return 0;
     if (num < 10)
@@ -23,7 +23,6 @@ int recPowSum(int num, int n)
 int isArmstrong(int num)
 {
     int n = (num == 0) ? 1 : log10(num) + 1;
-    int digit;
     int sum = recPowSum(num,n);
     return sum == num;
 }
