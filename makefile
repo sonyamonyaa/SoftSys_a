@@ -6,12 +6,13 @@ OBJ_REC=advancedClassificationRecursion.o
 OBJ_BASIC=basicClassification.o
 FLAGS= -Wall -g
 all: mains maindrec maindloop
-mains: $(OBJECTS_MAIN) recursives 
-	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
-maindloop: $(OBJECTS_MAIN) loopd
-	$(CC) $(FLAGS) -o maindloop $(OBJECTS_MAIN) ./libclassloops.so -lm
-maindrec: $(OBJECTS_MAIN) recursived
-	$(CC) $(FLAGS) -o maindrec $(OBJECTS_MAIN) ./libclassrec.so -lm
+#make all mains
+mains: $(OBJ_MAIN) recursives 
+	$(CC) $(FLAGS) -o mains $(OBJ_MAIN) libclassrec.a -lm
+maindloop: $(OBJ_MAIN) loopd
+	$(CC) $(FLAGS) -o maindloop $(OBJ_MAIN) ./libclassloops.so -lm
+maindrec: $(OBJ_MAIN) recursived
+	$(CC) $(FLAGS) -o maindrec $(OBJ_MAIN) ./libclassrec.so -lm
 loopd: $(OBJ_MAIN) $(OBJ_BASIC) $(OBJ_LOOP)
 	$(CC) -shared -o libclassloops.so $(OBJ_MAIN) $(OBJ_BASIC) $(OBJ_LOOP)
 recursived: $(OBJ_MAIN) $(OBJ_BASIC) $(OBJ_REC)
