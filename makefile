@@ -6,7 +6,7 @@ OBJ_REC=advancedClassificationRecursion.o
 OBJ_BASIC=basicClassification.o
 FLAGS= -Wall -g
 
-all:loops recursives recursived loopd mains maindloop maindrec 
+all:loops mains maindloop maindrec 
 
 #main programs
 mains: $(OBJ_MAIN) 
