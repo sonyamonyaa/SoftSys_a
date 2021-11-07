@@ -27,24 +27,16 @@ int isArmstrong(int num)
     return sum == num;
 }
 
-/* checks if a number is palindrome using it's size by div
+/* reverses a number using temp as a place holder
 */
-int recPalindrome(int num, int div){
-    if (num >= 0 && num <= 9) return true;
-    int ld = num / div;
-    int rd = num % 10;
-    if (rd != ld)
-        return false;
-    return recPalindrome((num%div)/10,div/100);
+int reverse(int num,int temp){
+    if (num == 0)
+        return temp;
+    temp = (temp * 10) + (num % 10);
+    return reverse(num / 10, temp);
 }
 int isPalindrome(int num)
 {
-    if (num < 0)
-        return false;
-    int div = 1;
-    while (num / div >= 10)
-    {
-        div *= 10;
-    }
-    return recPalindrome(num,div);
+    int temp = reverse(num,0);
+    return temp == num ;
 }

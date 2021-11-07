@@ -18,9 +18,9 @@ int isPrime(int num){
 int factorial(int num){
     int i=1;
     int fact=1;
-    while (i<num)
+    while (i<num+1)
     {
-        fact = fact * i;
+        fact *= i;
         i++;
     }
     return fact;
