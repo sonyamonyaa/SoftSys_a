@@ -9,13 +9,13 @@ FLAGS= -Wall -g
 all:loops recursives recursived loopd mains maindloop maindrec 
 
 #main programs
-mains: $(OBJ_MAIN) recursives 
+mains: $(OBJ_MAIN) 
 	$(CC) $(FLAGS) -o mains $(OBJ_MAIN) libclassrec.a -lm
 
-maindloop: $(OBJ_MAIN) loopd
+maindloop: $(OBJ_MAIN)
 	$(CC) $(FLAGS) -o maindloop $(OBJ_MAIN) ./libclassloops.so -lm
 	
-maindrec: $(OBJ_MAIN) recursived
+maindrec: $(OBJ_MAIN)
 	$(CC) $(FLAGS) -o maindrec $(OBJ_MAIN) ./libclassrec.so -lm
 
 #dynamic
